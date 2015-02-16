@@ -125,7 +125,8 @@ def unwrap():
         modifier.use_image_override = True
         
         bpy.context.scene.objects.active = currentPiece
-        bpy.ops.object.modifier_apply(modifier="UVPROJECT")
+        #Old Code bpy.ops.object.modifier_apply(modifier="UVPROJECT")
+        bpy.ops.object.modifier_apply(apply_as='DATA', modifier="UVProject")
            
         percentagePrint("Unwrapping", totalPieces)
            
